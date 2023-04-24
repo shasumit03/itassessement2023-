@@ -1,0 +1,30 @@
+
+    <!DOCTYPE html>
+<html>
+<head>
+	<title>Array Operations</title>
+	<script type="text/javascript">
+		var array = [];
+
+		function add_element_to_array() {
+			array.push(document.getElementById("text1").value);
+			alert("Element " + array[array.length-1] + " added at index " + (array.length-1));
+			document.getElementById("text1").value = "";
+		}
+
+		function display_array() {
+			var result = "<hr/>";
+			for (var i = 0; i < array.length; i++) {
+				result += "Element " + i + " = " + array[i] + "<br/>";
+			}
+			document.getElementById("Result").innerHTML = result;
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="text1">
+	<input type="button" id="button1" value="Add" onclick="add_element_to_array();">
+	<input type="button" id="button2" value="Display" onclick="display_array();">
+	<div id="Result"></div>
+</body>
+</html>
